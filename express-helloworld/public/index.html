@@ -11,22 +11,6 @@
     <p id="apiResponse"></p>
     <button id="welcomeApiBtn">Welcome</button>
     <p id="welcomeResponse"></p>
-
-    <script>
-        document.getElementById('apiButton').addEventListener('click', () => {
-            fetch('/api/hello')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('apiResponse').innerText = data.message;
-                });
-        });
-        document.getElementById('welcomeApiBtn').addEventListener('click', () => {
-            fetch('/api/welcome')
-                .then(response => response.json())
-                .then(data => {
-                    document.getElementById('welcomeResponse').innerText = data.message;
-                })
-        })
-    </script>
+    <script src="./scrpits/scripts.js"></script>
 </body>
 </html>
