@@ -1,2 +1,5 @@
 # UK294
-My repo for module 294
+
+Clone Repository
+
+Install dependencies with "npm install"
