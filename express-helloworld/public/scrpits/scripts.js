@@ -11,6 +11,6 @@ document.getElementById('welcomeApiBtn').addEventListener('click', () => {
         .then(response => response.json())
         .then(data => {
             document.getElementById('welcomeResponse').innerText = data.message;
-            document.getElementById('welcomeResponse').style.color = '#FF0000';
+            document.getElementById('welcomeResponse').classList.add("red")
         })
 })
