@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div id="posString"></div>
+		<script>
+			const posString = document.getElementById("posString");
+			function pos() {
+				const x = event.clientX;
+				const y = event.clientY;
+				const button = event.button;
+				const timestamp = event.timeStamp;
+
+				const responseText = `
+                <p>X-Position: ${x}</p>
+                <p>Y-Position: ${y}</p>
+                <p>Mausbutton: ${button}</p>`;
+
+				posString.innerHTML = responseText;
+			}
+
+			document.onmouseup = pos;
+		</script>
+	</body>
+</html>

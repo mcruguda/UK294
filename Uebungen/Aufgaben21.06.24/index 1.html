@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			table {
+				border-collapse: collapse;
+			}
+			td,
+			th {
+				border: 1px solid black;
+				padding: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<table id="table"></table>
+		<script>
+			let table = document.getElementById("table");
+			let tableData = [
+				["title", "description", "author"],
+				["Book", "fjisojfsi", "Leandro Schultze"],
+				["Cool book", "sfjssin", "Cyrill Augustiny"]
+			];
+
+			function insertData(table, tableData) {
+				table.innerHTML = ""; // Clear any existing content in the table
+
+				tableData.forEach((rowData) => {
+					let tr = "<tr>"; // Start a new row
+					rowData.forEach((cellData) => {
+						tr += "<td>" + cellData + "</td>"; // Add a cell for each item in the row
+					});
+					tr += "</tr>"; // Close the row
+					table.innerHTML += tr; // Add the row to the table
+				});
+			}
+
+			insertData(table, tableData);
+		</script>
+	</body>
+</html>
