@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			#clock {
+				font-size: 100px;
+				font-weight: bold;
+				text-align: center;
+				color: red;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<p id="clock"></p>
+		<script>
+			function showTime() {
+				const clock = document.getElementById("clock");
+				const d = new Date();
+				const timestamp = d.getTime();
+				const datevalues = [
+					d.getHours(),
+					d.getMinutes(),
+					d.getSeconds()
+				];
+				document.title = datevalues.join(":");
+				clock.innerHTML = datevalues.join(":");
+				setTimeout("showTime()", 1000);
+			}
+
+			showTime();
+		</script>
+	</body>
+</html>
